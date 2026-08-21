@@ -2,481 +2,891 @@
 <html lang="en">
 
 <head>
-    <title>Roman KC | Portfolio</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Roman KC | Portfolio">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <link rel="shortcut icon" href="profile.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <title>Roman KC — Full-stack Product Engineer</title>
+  <meta name="description"
+    content="Roman KC is a full-stack product engineer in Nepal building ERP, retail and marketplace software — NestJS, React, Flutter and PostgreSQL on Google Cloud.">
+  <meta name="author" content="Roman KC">
+  <link rel="canonical" href="https://www.romankc.com.np/">
+  <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fbfaf9" media="(prefers-color-scheme: light)">
 
-    <!-- FontAwesome JS -->
-    <script defer src="assets/fontawesome/js/all.js"></script>
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.romankc.com.np/">
+  <meta property="og:title" content="Roman KC — Full-stack Product Engineer">
+  <meta property="og:description"
+    content="Building ERP, retail and marketplace software for Nepali businesses. NestJS, React, Flutter, PostgreSQL, Google Cloud.">
+  <meta property="og:image" content="https://www.romankc.com.np/assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@romanchhetri02">
+  <meta name="twitter:creator" content="@romanchhetri02">
+  <meta name="twitter:title" content="Roman KC — Full-stack Product Engineer">
+  <meta name="twitter:description"
+    content="Building ERP, retail and marketplace software for Nepali businesses.">
+  <meta name="twitter:image" content="https://www.romankc.com.np/assets/images/og-cover.png">
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="icon" href="profile.ico">
+  <link rel="apple-touch-icon" href="assets/images/profile.png">
 
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css">
-    <!-- github activity css -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/github-activity-0.1.5.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roman KC",
+    "url": "https://www.romankc.com.np/",
+    "image": "https://www.romankc.com.np/assets/images/profile.png",
+    "jobTitle": "Full-stack Product Engineer",
+    "email": "mailto:romanchhetri02@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Kathmandu", "addressCountry": "NP" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Tribhuvan University, Institute of Science and Technology" },
+    "knowsLanguage": ["Nepali", "English"],
+    "knowsAbout": ["NestJS", "React", "TypeScript", "PostgreSQL", "Flutter", "Python", "Google Cloud Run", "ERP", "Multi-tenant architecture"],
+    "sameAs": [
+      "https://github.com/romankc17",
+      "https://www.linkedin.com/in/roman-kc-19911a1b0/",
+      "https://twitter.com/romanchhetri02",
+      "https://stackoverflow.com/users/12458918/roman-k-c"
+    ]
+  }
+  </script>
 
+  <style>
+    /* ============ tokens ============ */
+    :root {
+      --bg: #fbfaf9;
+      --bg-elev: #ffffff;
+      --bg-sunk: #f3f1ee;
+      --line: #e2ddd6;
+      --line-strong: #cfc8be;
+      --fg: #17140f;
+      --fg-muted: #635c52;
+      --fg-faint: #7a7265;
+      --accent: #b4470c;
+      --accent-fg: #ffffff;
+      --accent-soft: #fdf0e6;
+      --live: #177247;
+      --live-soft: #e6f4ed;
+      --shadow: 0 1px 2px rgba(23, 20, 15, .05), 0 8px 24px -12px rgba(23, 20, 15, .14);
+      --radius: 14px;
+      --maxw: 1080px;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color-scheme: light;
+    }
 
+    :root:not([data-theme="light"]) {
+      @media (prefers-color-scheme: dark) {
+        --bg: #0b0d10;
+        --bg-elev: #14181d;
+        --bg-sunk: #101419;
+        --line: #232a32;
+        --line-strong: #333c47;
+        --fg: #e9ecf1;
+        --fg-muted: #98a2b0;
+        --fg-faint: #78828f;
+        --accent: #ff8a3d;
+        --accent-fg: #1a0e05;
+        --accent-soft: #2a1a0f;
+        --live: #45d99a;
+        --live-soft: #102b20;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px -14px rgba(0, 0, 0, .7);
+        color-scheme: dark;
+      }
+    }
+
+    /* fallback for browsers without CSS nesting */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0b0d10;
+        --bg-elev: #14181d;
+        --bg-sunk: #101419;
+        --line: #232a32;
+        --line-strong: #333c47;
+        --fg: #e9ecf1;
+        --fg-muted: #98a2b0;
+        --fg-faint: #78828f;
+        --accent: #ff8a3d;
+        --accent-fg: #1a0e05;
+        --accent-soft: #2a1a0f;
+        --live: #45d99a;
+        --live-soft: #102b20;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px -14px rgba(0, 0, 0, .7);
+        color-scheme: dark;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0b0d10;
+      --bg-elev: #14181d;
+      --bg-sunk: #101419;
+      --line: #232a32;
+      --line-strong: #333c47;
+      --fg: #e9ecf1;
+      --fg-muted: #98a2b0;
+      --fg-faint: #78828f;
+      --accent: #ff8a3d;
+      --accent-fg: #1a0e05;
+      --accent-soft: #2a1a0f;
+      --live: #45d99a;
+      --live-soft: #102b20;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px -14px rgba(0, 0, 0, .7);
+      color-scheme: dark;
+    }
+
+    /* ============ base ============ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { margin: 0; line-height: 1.2; letter-spacing: -.02em; font-weight: 600; }
+    p { margin: 0; }
+    ul { margin: 0; padding: 0; list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    .skip {
+      position: absolute; left: -9999px; top: 0; z-index: 100;
+      background: var(--accent); color: var(--accent-fg);
+      padding: 10px 16px; border-radius: 0 0 8px 0; font-weight: 600;
+    }
+    .skip:focus { left: 0; }
+
+    /* ============ nav ============ */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s ease;
+    }
+    .nav.is-stuck { border-bottom-color: var(--line); }
+    .nav__in {
+      display: flex; align-items: center; gap: 16px;
+      height: 62px;
+    }
+    .brand {
+      font-weight: 700; letter-spacing: -.03em; font-size: 16px;
+      color: var(--fg); display: inline-flex; align-items: center; gap: 9px;
+    }
+    .brand:hover { text-decoration: none; }
+    .brand__dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--accent); flex: none;
+    }
+    .nav__links { display: flex; gap: 4px; margin-left: auto; align-items: center; }
+    .nav__links a {
+      color: var(--fg-muted); font-size: 14px; font-weight: 500;
+      padding: 7px 11px; border-radius: 8px;
+    }
+    .nav__links a:hover { color: var(--fg); background: var(--bg-sunk); text-decoration: none; }
+    @media (max-width: 640px) { .nav__links a { display: none; } }
+
+    .toggle {
+      appearance: none; border: 1px solid var(--line); background: var(--bg-elev);
+      color: var(--fg-muted); width: 36px; height: 36px; border-radius: 9px;
+      display: inline-grid; place-items: center; cursor: pointer; flex: none;
+      transition: color .15s ease, border-color .15s ease;
+    }
+    .toggle:hover { color: var(--fg); border-color: var(--line-strong); }
+    .toggle svg { width: 17px; height: 17px; }
+    .toggle .i-moon { display: none; }
+    :root[data-theme="dark"] .toggle .i-moon { display: block; }
+    :root[data-theme="dark"] .toggle .i-sun { display: none; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .toggle .i-moon { display: block; }
+      :root:not([data-theme="light"]) .toggle .i-sun { display: none; }
+    }
+
+    /* ============ hero ============ */
+    .hero { padding: 76px 0 64px; position: relative; }
+    .hero::before {
+      content: ""; position: absolute; inset: -180px 0 auto 0; height: 420px; z-index: -1;
+      background: radial-gradient(680px 320px at 22% 0%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%);
+      pointer-events: none;
+    }
+    .hero__top { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+    .hero__avatar {
+      width: 60px; height: 60px; border-radius: 50%; flex: none;
+      border: 1px solid var(--line-strong); object-fit: cover;
+    }
+    .eyebrow {
+      font-family: var(--mono); font-size: 12.5px; color: var(--fg-muted);
+      letter-spacing: .02em; line-height: 1.5;
+    }
+    .eyebrow svg {
+      width: 13px; height: 13px; opacity: .75;
+      display: inline-block; vertical-align: -2px; margin-right: 6px;
+    }
+    .eyebrow .sep { color: var(--fg-faint); margin: 0 6px; }
+    @media (max-width: 420px) { .eyebrow .avail { display: block; margin-top: 2px; } .eyebrow .sep { display: none; } }
+
+    .hero h1 { font-size: clamp(38px, 7vw, 62px); letter-spacing: -.035em; font-weight: 700; }
+    .hero__role {
+      font-size: clamp(19px, 3vw, 24px); font-weight: 500; color: var(--fg-muted);
+      margin-top: 10px; letter-spacing: -.02em;
+    }
+    .hero__role b { color: var(--fg); font-weight: 600; }
+    .hero__lede {
+      margin-top: 22px; max-width: 60ch; font-size: 17.5px; color: var(--fg-muted);
+    }
+    .hero__lede strong { color: var(--fg); font-weight: 500; }
+
+    .hero__cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; align-items: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 17px; border-radius: 10px; font-size: 14.5px; font-weight: 600;
+      border: 1px solid var(--line); background: var(--bg-elev); color: var(--fg);
+      transition: transform .12s ease, border-color .15s ease, background .15s ease;
+    }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); border-color: var(--line-strong); }
+    .btn svg { width: 16px; height: 16px; }
+    .btn--primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+    .btn--primary:hover { background: color-mix(in srgb, var(--accent) 88%, var(--fg)); }
+    .btn--icon { padding: 10px; color: var(--fg-muted); }
+    .btn--icon:hover { color: var(--fg); }
+
+    .now {
+      margin-top: 40px; padding: 14px 18px; border-radius: 12px;
+      background: var(--bg-sunk); border: 1px solid var(--line);
+      display: flex; gap: 12px; align-items: flex-start;
+      font-size: 14.5px; color: var(--fg-muted); max-width: 62ch;
+    }
+    .now__pulse {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--live);
+      flex: none; margin-top: 9px; box-shadow: 0 0 0 3px color-mix(in srgb, var(--live) 22%, transparent);
+    }
+    .now b { color: var(--fg); font-weight: 600; }
+
+    /* ============ sections ============ */
+    .section { padding: 62px 0; border-top: 1px solid var(--line); }
+    .section__head { margin-bottom: 34px; }
+    .section__num {
+      font-family: var(--mono); font-size: 12px; color: var(--accent);
+      letter-spacing: .1em; text-transform: uppercase; font-weight: 500;
+    }
+    .section h2 { font-size: clamp(25px, 4vw, 32px); margin-top: 8px; letter-spacing: -.03em; }
+    .section__sub { color: var(--fg-muted); margin-top: 10px; max-width: 58ch; font-size: 16px; }
+
+    /* ============ project cards ============ */
+    .projects { display: grid; gap: 20px; }
+    .card {
+      background: var(--bg-elev); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 26px 26px 24px;
+      box-shadow: var(--shadow);
+      transition: border-color .18s ease, transform .18s ease;
+    }
+    .card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+
+    .card__head { display: flex; align-items: flex-start; gap: 14px; flex-wrap: wrap; }
+    .card__title { font-size: 21px; letter-spacing: -.025em; }
+    .card__title a { color: var(--fg); display: inline-flex; align-items: center; gap: 7px; }
+    .card__title a:hover { color: var(--accent); text-decoration: none; }
+    .card__title svg { width: 14px; height: 14px; opacity: .55; }
+
+    .badge {
+      font-family: var(--mono); font-size: 11px; font-weight: 500;
+      padding: 4px 9px; border-radius: 100px; letter-spacing: .04em;
+      text-transform: uppercase; white-space: nowrap; margin-left: auto;
+      border: 1px solid var(--line-strong); color: var(--fg-muted); background: var(--bg-sunk);
+    }
+    .badge--live {
+      color: var(--live); background: var(--live-soft);
+      border-color: color-mix(in srgb, var(--live) 35%, transparent);
+    }
+
+    .card__desc { color: var(--fg-muted); margin-top: 12px; max-width: 68ch; }
+
+    .card__list { margin-top: 18px; display: grid; gap: 9px; }
+    .card__list li {
+      position: relative; padding-left: 22px; font-size: 14.8px; color: var(--fg-muted);
+    }
+    .card__list li::before {
+      content: ""; position: absolute; left: 4px; top: 10px;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--accent); opacity: .65;
+    }
+    .card__list b { color: var(--fg); font-weight: 500; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); }
+    .tag {
+      font-family: var(--mono); font-size: 11.5px; color: var(--fg-muted);
+      background: var(--bg-sunk); border: 1px solid var(--line);
+      padding: 4px 9px; border-radius: 6px;
+    }
+
+    /* ============ stack ============ */
+    .stack { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); }
+    .stack__col {
+      background: var(--bg-elev); border: 1px solid var(--line);
+      border-radius: 12px; padding: 20px 22px;
+    }
+    .stack__col h3 {
+      font-size: 12px; font-family: var(--mono); text-transform: uppercase;
+      letter-spacing: .1em; color: var(--accent); font-weight: 500; margin-bottom: 14px;
+    }
+    .stack__col li {
+      font-size: 14.8px; color: var(--fg-muted); padding: 3px 0;
+    }
+    .stack__col li b { color: var(--fg); font-weight: 500; }
+
+    .callout {
+      margin-top: 24px; border: 1px solid var(--line); border-left: 3px solid var(--accent);
+      background: var(--bg-sunk); border-radius: 0 12px 12px 0; padding: 20px 24px;
+    }
+    .callout h3 { font-size: 16px; margin-bottom: 8px; }
+    .callout p { color: var(--fg-muted); font-size: 15px; max-width: 70ch; }
+
+    /* ============ archive ============ */
+    .archive { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--bg-elev); }
+    .archive__row {
+      display: grid; grid-template-columns: 1fr auto; gap: 4px 20px;
+      padding: 16px 22px; border-bottom: 1px solid var(--line); align-items: baseline;
+    }
+    .archive__row:last-child { border-bottom: 0; }
+    .archive__name { font-weight: 600; font-size: 15.5px; }
+    .archive__tech { font-family: var(--mono); font-size: 12px; color: var(--fg-faint); white-space: nowrap; }
+    .archive__desc { grid-column: 1 / -1; color: var(--fg-muted); font-size: 14.5px; }
+    @media (max-width: 560px) {
+      .archive__row { grid-template-columns: 1fr; }
+      .archive__tech { white-space: normal; }
+    }
+    .archive__note { margin-top: 14px; font-size: 13.5px; color: var(--fg-faint); }
+
+    /* ============ about ============ */
+    .about { display: grid; gap: 34px; grid-template-columns: 1.35fr 1fr; align-items: start; }
+    @media (max-width: 760px) { .about { grid-template-columns: 1fr; } }
+    .about__body p + p { margin-top: 15px; }
+    .about__body p { color: var(--fg-muted); }
+
+    .facts { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-elev); overflow: hidden; }
+    .fact { padding: 15px 20px; border-bottom: 1px solid var(--line); }
+    .fact:last-child { border-bottom: 0; }
+    .fact dt {
+      font-family: var(--mono); font-size: 11px; text-transform: uppercase;
+      letter-spacing: .08em; color: var(--fg-faint); margin-bottom: 4px;
+    }
+    .fact dd { margin: 0; font-size: 14.8px; font-weight: 500; }
+    .fact dd span { display: block; font-weight: 400; color: var(--fg-muted); font-size: 13.5px; }
+
+    /* ============ contact ============ */
+    .contact { text-align: center; padding: 78px 0 70px; border-top: 1px solid var(--line); }
+    .contact h2 { font-size: clamp(28px, 5vw, 40px); letter-spacing: -.035em; }
+    .contact p { color: var(--fg-muted); margin: 16px auto 0; max-width: 46ch; font-size: 17px; }
+    .contact__cta { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .contact__mail {
+      display: inline-block; margin-top: 26px; font-family: var(--mono);
+      font-size: 14.5px; color: var(--fg-muted);
+    }
+    .contact__mail:hover { color: var(--accent); }
+
+    /* ============ footer ============ */
+    .foot {
+      border-top: 1px solid var(--line); padding: 26px 0;
+      display: flex; gap: 14px; justify-content: space-between; flex-wrap: wrap;
+      font-size: 13.5px; color: var(--fg-faint);
+    }
+    .foot a { color: var(--fg-faint); }
+    .foot a:hover { color: var(--accent); }
+  </style>
 </head>
 
 <body>
-    <!-- ******HEADER****** -->
-    <header class="header">
-        <div class="container clearfix">
-            <img class="profile-image img-fluid float-left rounded-circle" src="assets/images/profile.png" alt="profile image" />
-            <div class="profile-content float-left">
-                <h1 class="name">Roman KC</h1>
-                <h2 class="desc">Python Developer</h2>
-                <ul class="social list-inline">
-                    <li class="list-inline-item"><a href="https://twitter.com/romanchhetri02"><i class="fab fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/roman-kc-19911a1b0/"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="list-inline-item"><a href="https://github.com/romankc17"><i class="fab fa-github-alt"></i></a></li>
-                    <li class="list-inline-item"><a href="https://stackoverflow.com/users/12458918/roman-k-c"><i class="fab fa-stack-overflow"></i></a></li>
-                </ul>
-            </div>
-            <!--//profile-->
-            <a class="btn btn-cta-primary float-right" href="mailto:romanchhetri02@gmail.com" target="_blank"><i class="fas fa-paper-plane"></i> Contact Me</a>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="nav" id="nav">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top"><span class="brand__dot" aria-hidden="true"></span>Roman KC</a>
+      <div class="nav__links">
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M5.6 5.6 4 4M20 20l-1.6-1.6M18.4 5.6 20 4M4 20l1.6-1.6" />
+          </svg>
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z" />
+          </svg>
+        </button>
+      </div>
+      <button class="toggle" id="themeToggleSm" type="button" aria-label="Switch colour theme"
+        style="margin-left:auto;display:none">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" />
+          <path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M5.6 5.6 4 4M20 20l-1.6-1.6M18.4 5.6 20 4M4 20l1.6-1.6" />
+        </svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <header class="hero" id="top">
+      <div class="wrap">
+        <div class="hero__top">
+          <img class="hero__avatar" src="assets/images/profile.png" alt="" width="60" height="60">
+          <div class="eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Kathmandu, Nepal<span class="sep">·</span><span class="avail">Available for select work</span>
+          </div>
         </div>
-        <!--//container-->
+
+        <h1>Roman KC</h1>
+        <p class="hero__role">Full-stack <b>product engineer</b></p>
+
+        <p class="hero__lede">
+          I build and run production software for Nepali businesses — <strong>ERP, retail operations and
+            marketplaces</strong>. End to end: schema and API design through to the interface people actually use,
+          deployed and maintained.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#work">
+            See the work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h13M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn" href="mailto:romanchhetri02@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+              aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            Get in touch
+          </a>
+          <a class="btn btn--icon" href="https://github.com/romankc17" aria-label="GitHub" rel="me noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 .5C5.7.5.6 5.6.6 12c0 5 3.3 9.3 7.8 10.8.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.8C23.4 5.6 18.3.5 12 .5Z" />
+            </svg>
+          </a>
+          <a class="btn btn--icon" href="https://www.linkedin.com/in/roman-kc-19911a1b0/" aria-label="LinkedIn"
+            rel="me noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8.3 18.6H5.4V9.8h2.9v8.8ZM6.9 8.6a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4Zm11.7 10h-2.9v-4.3c0-1-.02-2.4-1.4-2.4-1.4 0-1.7 1.1-1.7 2.3v4.4H9.7V9.8h2.8v1.2h.04a3.1 3.1 0 0 1 2.8-1.5c3 0 3.5 2 3.5 4.5v4.6Z" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="now">
+          <span class="now__pulse" aria-hidden="true"></span>
+          <span><b>Currently</b> — building KaaryaOne, a multi-tenant ERP with Nepali VAT, TDS and fiscal-year
+            handling built into the core, for a ten-client deployment.</span>
+        </div>
+      </div>
     </header>
-    <!--//header-->
 
-    <div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary col-lg-8 col-12">
-                <section class="about section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
-                            <p>
-                                I am a driven individual with the ability to adapt to any situation and proven potential to grow self and others.
-				I am an inspired and self-taught Python developer with willigness to learn new things and has a strong interest in the 
-				development of software.
-                            </p>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-                <section class="latest section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">My Projects</h2>
-                        <div class="content">
-
-                            <div class="item featured text-center">
-
-                                <div class="featured-image has-ribbon">
-                                    <a href="https://nepdl.herokuapp.com/" target="_blank">
-                                        <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-featured.jpg" alt="Automation Form Fill-UP" />
-                                    </a>
-                                    <div class="ribbon">
-                                        <div class="text">New</div>
-                                    </div>
-                                </div>
-
-                                <h3 class="title mb-3"><a href="https://nepdl.herokuapp.com/" target="_blank">
-                                    Automation : Driving License Form Fill-Up
-                                </a></h3>
-
-                                <div class="desc text-left">
-                                    <p>
-
-                                        This project made the form fill-up process easier for the people who want to get their online driving license form filled. The client doesn't have to be involved in the complicated form-filling process. With this automation software, they only need to
-                                        enter the mandatory data for their form to be filled. The other remaining complicated process is handled with this software.
-
-                                    </p>
-                                </div>
-                                <!--//desc-->
-                                <a class="btn btn-cta-secondary" href="https://nepdl.herokuapp.com/" target="_blank"><i class="fas fa-thumbs-up"></i> Back my project</a>
-                            </div>
-                            <!--//item-->
-
-                            <hr class="divider" />
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="http://csitbmc.herokuapp.com/" target="_blank">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/logo.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="http://csitbmc.herokuapp.com/" target="_blank">
-                                        CSIT ASSociation of BMC Website
-                                    </a></h3>
-                                    <p class="mb-2">
-
-                                        A college association of BMC website made using Django as backend with the features of adding blogs,
-                                        events, notes, and other things.
-                                    </p>
-                                    <p><a class="more-link" href="http://csitbmc.herokuapp.com/" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <hr class="divider" />
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://github.com/romankc17/blog_post" target="_blank">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-1.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/romankc17/blog_post" target="_blank">
-                                        Blog Application
-                                    </a></h3>
-                                    <p class="mb-2">
-
-                                        A simple blog website made with Django for backend where you can read and write a blog and even edit or delete your blog. It also includes the features of authentication.
-                                    </p>
-                                    <p><a class="more-link" href="https://github.com/romankc17/blog_post" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://github.com/romankc17/SpacePygame" target="_blank">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-2.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/romankc17/SpacePygame" target="_blank">
-                                        Spaceship Space Shooter Game
-                                    </a></h3>
-                                    <p class="mb-2">
-                                        Spaceship Space Shooter Game made with Pygame, a python module for making games and UI.
-                                    </p>
-                                    <p><a class="more-link" href="https://github.com/romankc17/SpacePygame" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="https://github.com/romankc17/yt-music-downloader" target="_blank">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-3.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="https://github.com/romankc17/yt-music-downloader" target="_blank">
-                                        Youtube Music Downloader
-                                    </a></h3>
-                                    <p class="mb-2">
-                                        A GUI made with Tkinter along with Spotify API, Youtube API, and Genius API to download music from youtube just by copying and pasting the URL of the video. The downloaded music file also contains the metadata such as the song's artist name, song's name,
-                                        album name, album cover art, and lyrics of the song.
-                                    </p>
-                                    <p><a class="more-link" href="https://github.com/romankc17/yt-music-downloader" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-                <section class="projects section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Other Projects</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">
-                                    <a href="#" target="_blank">
-                                        <!-- Pillar - Free Boootstrap Resume/CV Template for Developers -->
-                                    </a>
-                                    <!-- <span class="badge badge-theme">Free</span></h3> -->
-                                    <p class="summary">
-                                        <!-- Provide a brief description of your project. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatu. -->
-                                    </p>
-                            </div>
-
-
-                            <a class="btn btn-cta-secondary" href="https://github.com/romankc17/">More on GitHub <i class="fas fa-chevron-right pt-1"></i></a>
-
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-                <section class="experience section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Work Experience</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">
-                                    <!-- Posts  -->
-                                    <span class="place"><a href="#">
-                                        <!-- Company Name -->
-                                    </a></span> <span class="year">
-                                        <!-- Year you worked there -->
-                                    </span></h3>
-                                <p>
-                                    <!-- Description -->
-                                </p>
-                            </div>
-                            <!--//item-->
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-            </div>
-            <!--//primary-->
-            <div class="secondary col-lg-4 col-12">
-                <aside class="info aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading sr-only">Basic Information</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Bhairahawa, Nepal</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="mailto:romanchhetri02@gmail.com">romanchhetri02@gmail.com</a></li>
-                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">https://www.website.com</a></li>
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//aside-->
-
-                <aside class="education aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i>BSc. CSIT</h3>
-                                <h4 class="university">Tribhuwan University<span class="year">(2019-2022)</span></h4>
-                                <h3 class="university">Institute of Science and Technology</h3>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i>High School(Grade:11-12)</h3>
-                                <h4 class="university">St. Joseph High School<span class="year">(2016-2018)</span></h4>
-                                <h4 class="university">Science Faculty<span class="year"></h4>
-                            </div>
-                            <!--//item-->
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="skills aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Skills</h2>
-                        <div class="content">
-                            <p class="intro">
-
-                                <div class="skillset">
-
-                                    <div class="item">
-                                        <h3 class="level-title">Python &amp; Django<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title=""><i class="fas fa-info-circle"></i>Advanced</span></h3>
-                                        <div class="level-bar">
-                                            <div class="level-bar-inner" data-level="80%">
-                                            </div>
-                                        </div>
-                                        <!--//level-bar-->
-                                    </div>
-                                    <!--//item-->
-
-                                    <div class="item">
-                                        <h3 class="level-title">Javascript<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title=""><i class="fas fa-info-circle"></i>Intermediate</span></h3>
-                                        <div class="level-bar">
-                                            <div class="level-bar-inner" data-level="60%">
-                                            </div>
-                                        </div>
-                                        <!--//level-bar-->
-                                    </div>
-                                    <!--//item-->
-
-                                    <div class="item">
-                                        <h3 class="level-title">HTML5, CSS3<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title=""><i class="fas fa-info-circle"></i>Intermediate</span></h3>
-                                        <div class="level-bar">
-                                            <div class="level-bar-inner" data-level="65%">
-                                            </div>
-                                        </div>
-                                        <!--//level-bar-->
-                                    </div>
-                                    <!--//item-->
-
-                                    <div class="item">
-                                        <h3 class="level-title">Database<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title=""><i class="fas fa-info-circle"></i>Advanced</span></h3>
-                                        <div class="level-bar">
-                                            <div class="level-bar-inner" data-level="85%">
-                                            </div>
-                                        </div>
-                                        <!--//level-bar-->
-                                    </div>
-                                    <!--//item-->
-
-                                    <div class="item">
-                                        <h3 class="level-title">Git<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title=""><i class="fas fa-info-circle"></i>Advanced</span></h3>
-                                        <div class="level-bar">
-                                            <div class="level-bar-inner" data-level="85%">
-                                            </div>
-                                        </div>
-                                        <!--//level-bar-->
-                                    </div>
-                                    <!--//item-->
-
-                                    <p><a class="more-link" href="https://github.com/romankc17"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p>
-                                </div>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="certificate aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Some Certificates</h2>
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">                                
-                               
-                                    <a href="assets/images/certificates/python-coursera.png" class="carousel-item active">
-                                        <img class="d-block w-100" src="assets/images/certificates/panda-kaggle.png" alt="Python - Coursera">                                        
-                                        <div class="wrap">
-                                            <h5>Data Analysis in Python (University of Michigan) - Coursera</h3>
-                                        </div>                                    
-                                    </a>                                     
-                               
-                                    <a href="assets/images/certificates/python-linkedin.png" class="carousel-item ">
-                                        <img class="d-block w-100" src="assets/images/certificates/python-linkedin.png" alt="Pandas Certificate">                                            
-                                        <div class="wrap">
-                                            <h5>Learning Python - Linkedin</h3>
-                                        </div>                                    
-                                    </a>                                       
-                               
-                                    <a href="assets/images/certificates/panda-kaggle.png" class="carousel-item ">
-                                        <img class="d-block w-100" src="assets/images/certificates/panda-kaggle.png" alt="Pandas Certificate">                                            
-                                        <div class="wrap">
-                                            <h5>Pandas - Kaggle</h3>
-                                        </div>                                    
-                                    </a>                                       
-                               
-                                    <a href="assets/images/certificates/typing-speed.png" class="carousel-item ">
-                                        <img class="d-block w-100" src="assets/images/certificates/typing-speed.png" alt="Pandas Certificate">                                            
-                                        <div class="wrap">
-                                            <h5>Typing Test</h3>
-                                        </div>                                    
-                                    </a>                                                        
-                                
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </div>
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="languages aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Languages</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>Nepali:</strong></span>
-                                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
-                                    </li>
-                                    <!--//item-->
-                                    <li class="item">
-                                        <span class="title"><strong>English:</strong></span>
-                                        <span class="level">Professional Proficiency <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i></span>
-                                    </li>
-                                    <!--//item-->
-                                    </ul>
-                            </div>
-                            <!--//content-->
-                        </div>
-                        <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="testimonials aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Testimonials</h2>
-                        <div class="content">
-                            <div class="item">
-                                <blockquote class="quote">
-                                    <p><i class="fas fa-quote-left"></i> Roman is an excellent developer and he is passionate about what he does. You can totally count on him to deliver your projects!
-                                    </p>
-                                </blockquote>
-                                <!-- <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p> -->
-                            </div>
-                            <!--//item-->
-
-                            <p><a class="more-link" href="https://www.linkedin.com/in/roman-kc-19911a1b0/"><i class="fas fa-external-link-alt"></i>More on Linkedin</a></p>
-
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-
-
-                </div>
-                <!--//secondary-->
-            </div>
-            <!--//row-->
+    <!-- ================= WORK ================= -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section__head">
+          <div class="section__num">01 — Selected work</div>
+          <h2>Products I design, build and operate</h2>
+          <p class="section__sub">Not client tickets — whole products, from the data model to the shop owner using it on
+            a Tuesday afternoon.</p>
         </div>
-        <!--//masonry-->
 
-        <!-- ******FOOTER****** -->
-        <footer class="footer">
-            <div class="container text-center">
-                <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-                <small class="copyright">
-                    Designed with 
-                    <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        <div class="projects">
+
+          <!-- BaasMandu -->
+          <article class="card">
+            <div class="card__head">
+              <h3 class="card__title">
+                <a href="https://baasmandu.com" target="_blank" rel="noopener">BaasMandu
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 4h6v6M20 4 10 14M18 14v5a1.8 1.8 0 0 1-1.8 1.8H5A1.8 1.8 0 0 1 3.2 19V7.8A1.8 1.8 0 0 1 5 6h5" />
+                  </svg>
+                </a>
+              </h3>
+              <span class="badge badge--live">Live</span>
             </div>
-            <!--//container-->
-        </footer>
-        <!--//footer-->
+            <p class="card__desc">
+              A property rental marketplace for the Kathmandu Valley. Renters search real listings; agents manage
+              their own inventory from a dedicated dashboard.
+            </p>
+            <ul class="card__list">
+              <li><b>Agent dashboard</b> with per-agent listing management and photo pipeline</li>
+              <li><b>Automated image processing</b> — watermarking in Pillow, inpainting-based clean-up in OpenCV</li>
+              <li><b>Organic growth engine</b> — SEO-led acquisition tracked through Google Search Console</li>
+              <li><b>Bilingual TikTok DM auto-responder</b> that reads Nepali and English enquiries and replies with
+                matching listings</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span
+                class="tag">Python</span><span class="tag">Pillow / OpenCV</span><span class="tag">Cloud Run</span>
+            </div>
+          </article>
 
-        <!-- Javascript -->
+          <!-- KaaryaOne -->
+          <article class="card">
+            <div class="card__head">
+              <h3 class="card__title"><a href="#contact">KaaryaOne</a></h3>
+              <span class="badge">In development</span>
+            </div>
+            <p class="card__desc">
+              A multi-tenant ERP built around how Nepali businesses actually file. VAT, TDS and the Nepali fiscal
+              year are first-class parts of the ledger, not a localisation layer bolted on afterwards.
+            </p>
+            <ul class="card__list">
+              <li><b>Double-entry general ledger</b> with AP/AR, built on the Nepali fiscal calendar</li>
+              <li><b>Shared multi-tenant PostgreSQL</b> with per-tenant role-based access control</li>
+              <li><b>NCM courier integration</b> using per-tenant API tokens, so COD settles into each client's own
+                account</li>
+              <li>Architected for a <b>ten-client deployment</b> on a single managed database</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">NestJS</span><span class="tag">React</span><span class="tag">TypeScript</span><span
+                class="tag">PostgreSQL</span><span class="tag">Multi-tenancy</span><span class="tag">Cloud Run</span>
+            </div>
+          </article>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <!-- KaaryaFlow -->
+          <article class="card">
+            <div class="card__head">
+              <h3 class="card__title"><a href="#contact">KaaryaFlow</a></h3>
+              <span class="badge">In development</span>
+            </div>
+            <p class="card__desc">
+              Retail management for clothing shops — an operating system for the business rather than another point
+              of sale. Every feature has to help an owner buy, stock, price, sell or understand their shop better.
+            </p>
+            <ul class="card__list">
+              <li><b>Buying, stock, pricing and sales</b> in one connected workflow</li>
+              <li><b>Quiet, factual reminders</b> surfaced where the owner already works — every line traceable back
+                to the data behind it</li>
+              <li><b>End-to-end Playwright suite</b> gating production releases</li>
+              <li>Deliberately narrow scope — no CRM sprawl, no dashboards nobody opens</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">NestJS</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span
+                class="tag">Playwright</span><span class="tag">QA automation</span>
+            </div>
+          </article>
 
-        <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
-        <!-- github calendar plugin -->
-        <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-        <!-- github activity plugin -->
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-        <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
-        <!-- custom js -->
-        <script type="text/javascript" src="assets/js/main.js"></script>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STACK ================= -->
+    <section class="section" id="stack">
+      <div class="wrap">
+        <div class="section__head">
+          <div class="section__num">02 — Stack</div>
+          <h2>What I work with</h2>
+          <p class="section__sub">Chosen per project, but this is where I'm fastest.</p>
+        </div>
+
+        <div class="stack">
+          <div class="stack__col">
+            <h3>Backend</h3>
+            <ul>
+              <li><b>NestJS</b> · Node.js</li>
+              <li>REST API design</li>
+              <li>Multi-tenant architecture</li>
+              <li>Role-based access control</li>
+              <li>Authentication &amp; authorisation</li>
+            </ul>
+          </div>
+          <div class="stack__col">
+            <h3>Frontend</h3>
+            <ul>
+              <li><b>React</b> · TypeScript</li>
+              <li>Component systems</li>
+              <li>Dashboard &amp; data-dense UI</li>
+              <li>HTML5 · CSS3 · responsive</li>
+            </ul>
+          </div>
+          <div class="stack__col">
+            <h3>Data</h3>
+            <ul>
+              <li><b>PostgreSQL</b></li>
+              <li>Schema &amp; migration design</li>
+              <li>Double-entry accounting models</li>
+              <li>Python · pandas</li>
+            </ul>
+          </div>
+          <div class="stack__col">
+            <h3>Infrastructure</h3>
+            <ul>
+              <li><b>Google Cloud Run</b></li>
+              <li>gcloud CLI · env management</li>
+              <li>Git · CI pipelines</li>
+              <li>Cloudflare · DNS</li>
+            </ul>
+          </div>
+          <div class="stack__col">
+            <h3>Quality &amp; tooling</h3>
+            <ul>
+              <li><b>Playwright</b> end-to-end tests</li>
+              <li>QA automation</li>
+              <li>Python scripting — Pillow, OpenCV, BeautifulSoup</li>
+            </ul>
+          </div>
+          <div class="stack__col">
+            <h3>Mobile</h3>
+            <ul>
+              <li><b>Flutter</b> · Dart</li>
+              <li>Cross-platform delivery</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>Beyond the stack</h3>
+          <p>
+            I know the Nepali business context from the inside — IRD filing, VAT and TDS, the Nepali fiscal year,
+            local courier and cash-on-delivery settlement, and how to write product copy that works for owners who
+            switch between Nepali and English mid-sentence. That context is usually the hard part of shipping
+            software here, not the code.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARCHIVE ================= -->
+    <section class="section" id="archive">
+      <div class="wrap">
+        <div class="section__head">
+          <div class="section__num">03 — Earlier work</div>
+          <h2>Where I started</h2>
+          <p class="section__sub">Built between 2020 and 2022 while studying for my BSc — Python and Django, mostly for
+            people around me who needed something to exist.</p>
+        </div>
+
+        <div class="archive">
+          <div class="archive__row">
+            <div class="archive__name">Driving licence form automation</div>
+            <div class="archive__tech">Python · Django · Selenium</div>
+            <p class="archive__desc">Turned Nepal's online driving-licence application into a short form — applicants
+              entered only the mandatory fields and the tool handled the rest of the submission flow.</p>
+          </div>
+          <div class="archive__row">
+            <div class="archive__name">CSIT Association of BMC</div>
+            <div class="archive__tech">Django · PostgreSQL</div>
+            <p class="archive__desc">Website for the college CSIT association: blog, event listings and a shared notes
+              library for students.</p>
+          </div>
+          <div class="archive__row">
+            <div class="archive__name">Blog platform</div>
+            <div class="archive__tech">Django</div>
+            <p class="archive__desc">Multi-user blogging application with authentication and full create, read, update
+              and delete flows.</p>
+          </div>
+          <div class="archive__row">
+            <div class="archive__name">YouTube music downloader</div>
+            <div class="archive__tech">Python · Tkinter · REST APIs</div>
+            <p class="archive__desc">Desktop app wiring together the Spotify, YouTube and Genius APIs, with automatic
+              metadata and lyrics embedding.</p>
+          </div>
+          <div class="archive__row">
+            <div class="archive__name">Spaceship shooter</div>
+            <div class="archive__tech">Python · Pygame</div>
+            <p class="archive__desc">An arcade space shooter — collision detection, sprite animation and scoring, written
+              to learn game loops.</p>
+          </div>
+        </div>
+        <p class="archive__note">The original Heroku deployments retired with the free tier in 2022. Source for these is
+          on <a href="https://github.com/romankc17" rel="noopener">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section__head">
+          <div class="section__num">04 — About</div>
+          <h2>A bit of background</h2>
+        </div>
+
+        <div class="about">
+          <div class="about__body">
+            <p>
+              I started out self-taught, writing Python because something in front of me needed automating. That
+              hasn't really changed — it just got bigger. Today I run several products at once, which means I do the
+              database design, the API, the interface, the deployment and the support conversation that follows.
+            </p>
+            <p>
+              Working across the whole stack on products I also operate has made me opinionated about restraint. Most
+              business software fails here not because it lacks features but because it has too many, aimed at
+              workflows nobody has. I'd rather ship a narrow thing that a shop owner opens every morning than a broad
+              one they abandon in a week.
+            </p>
+            <p>
+              I'm open to consulting and product work, particularly where local compliance, multi-tenancy or
+              Nepal-specific integrations are the hard part.
+            </p>
+          </div>
+
+          <dl class="facts">
+            <div class="fact">
+              <dt>Based in</dt>
+              <dd>Kathmandu, Nepal <span>Working with clients across the country</span></dd>
+            </div>
+            <div class="fact">
+              <dt>Education</dt>
+              <dd>BSc. CSIT <span>Tribhuvan University, Institute of Science and Technology · 2019–2022</span></dd>
+            </div>
+            <div class="fact">
+              <dt>Languages</dt>
+              <dd>Nepali &amp; English <span>Native · Professional proficiency</span></dd>
+            </div>
+            <div class="fact">
+              <dt>Focus</dt>
+              <dd>ERP · Retail · Marketplaces <span>Multi-tenant B2B products</span></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <h2>Let's build something</h2>
+        <p>Have a product that needs to exist, or one that needs someone who can own the whole of it? I read every
+          message.</p>
+        <div class="contact__cta">
+          <a class="btn btn--primary" href="mailto:romanchhetri02@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+              aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+            Email me
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/roman-kc-19911a1b0/" rel="me noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8.3 18.6H5.4V9.8h2.9v8.8ZM6.9 8.6a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4Zm11.7 10h-2.9v-4.3c0-1-.02-2.4-1.4-2.4-1.4 0-1.7 1.1-1.7 2.3v4.4H9.7V9.8h2.8v1.2h.04a3.1 3.1 0 0 1 2.8-1.5c3 0 3.5 2 3.5 4.5v4.6Z" />
+            </svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/romankc17" rel="me noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 .5C5.7.5.6 5.6.6 12c0 5 3.3 9.3 7.8 10.8.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.8C23.4 5.6 18.3.5 12 .5Z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <a class="contact__mail" href="mailto:romanchhetri02@gmail.com">romanchhetri02@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="foot">
+      <span>© <span id="year">2026</span> Roman KC · Kathmandu, Nepal</span>
+      <span>Built from scratch — no framework, no tracker. <a href="https://github.com/romankc17/portfolio"
+          rel="noopener">Source</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      /* ---- theme ---- */
+      function stored() {
+        try { return localStorage.getItem('theme'); } catch (e) { return null; }
+      }
+      function save(v) {
+        try { localStorage.setItem('theme', v); } catch (e) { }
+      }
+      var saved = stored();
+      if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
+
+      function current() {
+        var explicit = root.getAttribute('data-theme');
+        if (explicit) return explicit;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      function flip() {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        save(next);
+      }
+      ['themeToggle', 'themeToggleSm'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('click', flip);
+      });
+
+      /* small-screen toggle swap */
+      function layout() {
+        var sm = document.getElementById('themeToggleSm');
+        var lg = document.getElementById('themeToggle');
+        if (!sm || !lg) return;
+        if (window.innerWidth <= 640) { sm.style.display = 'grid'; lg.style.display = 'none'; }
+        else { sm.style.display = 'none'; lg.style.display = 'grid'; }
+      }
+      layout();
+      window.addEventListener('resize', layout);
+
+      /* ---- sticky nav border ---- */
+      var nav = document.getElementById('nav');
+      function onScroll() {
+        if (window.scrollY > 8) nav.classList.add('is-stuck');
+        else nav.classList.remove('is-stuck');
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ---- year ---- */
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 
 </html>
