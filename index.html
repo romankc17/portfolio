@@ -350,6 +350,27 @@
       padding: 4px 9px; border-radius: 6px;
     }
 
+    /* ============ experience ============ */
+    .roles { display: grid; gap: 20px; }
+    .role {
+      background: var(--bg-elev); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 24px 26px;
+      box-shadow: var(--shadow);
+      transition: border-color .18s ease;
+    }
+    .role:hover { border-color: var(--line-strong); }
+    .role__head {
+      display: flex; gap: 12px 20px; align-items: baseline;
+      justify-content: space-between; flex-wrap: wrap; margin-bottom: 4px;
+    }
+    .role__title { font-size: 19px; letter-spacing: -.02em; }
+    .role__org { color: var(--fg-muted); font-size: 14.8px; margin-top: 4px; }
+    .role__when {
+      font-family: var(--mono); font-size: 12px; color: var(--fg-faint);
+      white-space: nowrap; letter-spacing: .02em;
+    }
+    .role .card__list { margin-top: 14px; }
+
     /* ============ stack ============ */
     .stack { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(232px, 1fr)); }
     .stack__col {
@@ -434,6 +455,7 @@
       <a class="brand" href="#top"><span class="brand__dot" aria-hidden="true"></span>Roman KC</a>
       <div class="nav__links">
         <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
         <a href="#stack">Stack</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -605,11 +627,54 @@
       </div>
     </section>
 
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section__head">
+          <div class="section__num">02 — Experience</div>
+          <h2>Where I've worked</h2>
+          <p class="section__sub">Two years in other people's codebases before going independent.</p>
+        </div>
+
+        <div class="roles">
+          <article class="role">
+            <div class="role__head">
+              <div>
+                <h3 class="role__title">Junior Full Stack Developer</h3>
+                <p class="role__org">Beta Analytics Pvt. Ltd. · New Baneshwor, Kathmandu</p>
+              </div>
+              <span class="role__when">Apr 2023 — Dec 2023</span>
+            </div>
+            <ul class="card__list">
+              <li>Built new features across a Django MVC codebase</li>
+              <li>Data modelling, database queries and data-integrity work</li>
+              <li>Worked directly with senior developers on requirements, planning and implementation</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role__head">
+              <div>
+                <h3 class="role__title">Elixir Developer, Intern</h3>
+                <p class="role__org">Tyrosoft Pvt. Ltd. · Kathmandu</p>
+              </div>
+              <span class="role__when">May 2022 — Sep 2022</span>
+            </div>
+            <ul class="card__list">
+              <li>Functional programming in <b>Elixir</b></li>
+              <li>Built RESTful CRUD APIs designed for concurrency, fault tolerance and scalability</li>
+              <li>First run through a full project lifecycle — collaboration, communication, iteration</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= STACK ================= -->
     <section class="section" id="stack">
       <div class="wrap">
         <div class="section__head">
-          <div class="section__num">02 — Stack</div>
+          <div class="section__num">03 — Stack</div>
           <h2>What I work with</h2>
           <p class="section__sub">Chosen per project, but this is where I'm fastest.</p>
         </div>
@@ -688,7 +753,7 @@
     <section class="section" id="archive">
       <div class="wrap">
         <div class="section__head">
-          <div class="section__num">03 — Earlier work</div>
+          <div class="section__num">04 — Earlier work</div>
           <h2>Where I started</h2>
           <p class="section__sub">Built between 2020 and 2022 while studying for my BSc — Python and Django, mostly for
             people around me who needed something to exist.</p>
@@ -700,6 +765,13 @@
             <div class="archive__tech">Python · Django · Selenium</div>
             <p class="archive__desc">Turned Nepal's online driving-licence application into a short form — applicants
               entered only the mandatory fields and the tool handled the rest of the submission flow.</p>
+          </div>
+          <div class="archive__row">
+            <div class="archive__name">Automated passport form filling</div>
+            <div class="archive__tech">Python · Django · private repo</div>
+            <p class="archive__desc">Automated biometric appointment scheduling on Nepal's online passport system,
+              built to cope with the site's traffic spikes and walk applicants through the form. Cut the time to fill
+              it manually by more than half.</p>
           </div>
           <div class="archive__row">
             <div class="archive__name">CSIT Association of BMC</div>
@@ -726,8 +798,8 @@
               to learn game loops.</p>
           </div>
         </div>
-        <p class="archive__note">The original Heroku deployments retired with the free tier in 2022. Source for these is
-          on <a href="https://github.com/romankc17" rel="noopener">GitHub</a>.</p>
+        <p class="archive__note">The original Heroku deployments retired with the free tier in 2022. Source for most of these
+          is on <a href="https://github.com/romankc17" rel="noopener">GitHub</a>.</p>
       </div>
     </section>
 
@@ -735,7 +807,7 @@
     <section class="section" id="about">
       <div class="wrap">
         <div class="section__head">
-          <div class="section__num">04 — About</div>
+          <div class="section__num">05 — About</div>
           <h2>A bit of background</h2>
         </div>
 
