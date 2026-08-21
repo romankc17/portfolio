@@ -7,7 +7,7 @@
 
   <title>Roman KC — Full-stack Product Engineer</title>
   <meta name="description"
-    content="Roman KC is a full-stack product engineer in Nepal building ERP, retail and marketplace software — NestJS, React, Flutter and PostgreSQL on Google Cloud.">
+    content="Roman KC is a full-stack product engineer in Nepal building ERP, retail and marketplace software — Laravel, React, Next.js and PostgreSQL on Google Cloud.">
   <meta name="author" content="Roman KC">
   <link rel="canonical" href="https://www.romankc.com.np/">
   <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
@@ -18,7 +18,7 @@
   <meta property="og:url" content="https://www.romankc.com.np/">
   <meta property="og:title" content="Roman KC — Full-stack Product Engineer">
   <meta property="og:description"
-    content="Building ERP, retail and marketplace software for Nepali businesses. NestJS, React, Flutter, PostgreSQL, Google Cloud.">
+    content="Building ERP, retail and marketplace software for Nepali businesses. Laravel, React, Next.js, PostgreSQL, Google Cloud.">
   <meta property="og:image" content="https://www.romankc.com.np/assets/images/og-cover.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -51,7 +51,7 @@
     "address": { "@type": "PostalAddress", "addressLocality": "Kathmandu", "addressCountry": "NP" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Tribhuvan University, Institute of Science and Technology" },
     "knowsLanguage": ["Nepali", "English"],
-    "knowsAbout": ["NestJS", "React", "TypeScript", "PostgreSQL", "Flutter", "Python", "Google Cloud Run", "ERP", "Multi-tenant architecture"],
+    "knowsAbout": ["Laravel", "PHP", "React", "Next.js", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL", "Redis", "React Native", "Electron", "Python", "Google Cloud Run", "ERP", "Multi-tenant architecture"],
     "sameAs": [
       "https://github.com/romankc17",
       "https://www.linkedin.com/in/roman-kc-19911a1b0/",
@@ -521,8 +521,8 @@
 
         <div class="now">
           <span class="now__pulse" aria-hidden="true"></span>
-          <span><b>Currently</b> — building KaaryaOne, a multi-tenant ERP with Nepali VAT, TDS and fiscal-year
-            handling built into the core, for a ten-client deployment.</span>
+          <span><b>Currently</b> — building KaaryaOne, a configurable multi-tenant ERP with Nepali VAT, TDS and
+            Bikram Sambat dates in the core, shipping to web, mobile and desktop.</span>
         </div>
       </div>
     </header>
@@ -557,15 +557,17 @@
               their own inventory from a dedicated dashboard.
             </p>
             <ul class="card__list">
-              <li><b>Agent dashboard</b> with per-agent listing management and photo pipeline</li>
+              <li><b>Three roles, one marketplace</b> — renters browse and enquire, agents and owners list, admins
+                moderate and run automations</li>
               <li><b>Automated image processing</b> — watermarking in Pillow, inpainting-based clean-up in OpenCV</li>
               <li><b>Organic growth engine</b> — SEO-led acquisition tracked through Google Search Console</li>
               <li><b>Bilingual TikTok DM auto-responder</b> that reads Nepali and English enquiries and replies with
                 matching listings</li>
             </ul>
             <div class="tags">
-              <span class="tag">React</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span
-                class="tag">Python</span><span class="tag">Pillow / OpenCV</span><span class="tag">Cloud Run</span>
+              <span class="tag">Next.js 15</span><span class="tag">Express</span><span class="tag">Prisma</span><span
+                class="tag">PostgreSQL</span><span class="tag">Socket.IO</span><span class="tag">Expo</span><span
+                class="tag">Python</span><span class="tag">Cloud Run</span>
             </div>
           </article>
 
@@ -576,42 +578,26 @@
               <span class="badge">In development</span>
             </div>
             <p class="card__desc">
-              A multi-tenant ERP built around how Nepali businesses actually file. VAT, TDS and the Nepali fiscal
-              year are first-class parts of the ledger, not a localisation layer bolted on afterwards.
+              A configurable ERP and workflow platform for Nepali businesses — one system that reshapes itself per
+              industry instead of one rebuild per client. Web, mobile, desktop and realtime clients all run off a
+              single API.
             </p>
             <ul class="card__list">
-              <li><b>Double-entry general ledger</b> with AP/AR, built on the Nepali fiscal calendar</li>
-              <li><b>Shared multi-tenant PostgreSQL</b> with per-tenant role-based access control</li>
-              <li><b>NCM courier integration</b> using per-tenant API tokens, so COD settles into each client's own
-                account</li>
-              <li>Architected for a <b>ten-client deployment</b> on a single managed database</li>
+              <li><b>Multi-tenant by agency and branch</b> — per-tenant module toggles and industry templates, so a
+                clothing retailer and a distributor run the same core configured differently</li>
+              <li><b>Accounting and inventory core</b> — invoicing, bills, expenses, cashflow, stock movements with
+                variants and barcodes, POS sessions and role-based permissions</li>
+              <li><b>Four clients, one API</b> — React 19 web app, Expo mobile, Electron desktop, and a Redis-backed
+                WebSocket service for live updates</li>
+              <li><b>Built on the Nepali fiscal calendar</b> — Bikram Sambat dates, VAT and TDS, and NCM courier
+                integration with per-tenant tokens so COD settles into each client's own account</li>
+              <li><b>End-to-end Playwright suite</b> gating production releases on Cloud Run</li>
             </ul>
             <div class="tags">
-              <span class="tag">NestJS</span><span class="tag">React</span><span class="tag">TypeScript</span><span
-                class="tag">PostgreSQL</span><span class="tag">Multi-tenancy</span><span class="tag">Cloud Run</span>
-            </div>
-          </article>
-
-          <!-- KaaryaFlow -->
-          <article class="card">
-            <div class="card__head">
-              <h3 class="card__title"><a href="#contact">KaaryaFlow</a></h3>
-              <span class="badge">In development</span>
-            </div>
-            <p class="card__desc">
-              Retail management for clothing shops — an operating system for the business rather than another point
-              of sale. Every feature has to help an owner buy, stock, price, sell or understand their shop better.
-            </p>
-            <ul class="card__list">
-              <li><b>Buying, stock, pricing and sales</b> in one connected workflow</li>
-              <li><b>Quiet, factual reminders</b> surfaced where the owner already works — every line traceable back
-                to the data behind it</li>
-              <li><b>End-to-end Playwright suite</b> gating production releases</li>
-              <li>Deliberately narrow scope — no CRM sprawl, no dashboards nobody opens</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">NestJS</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span
-                class="tag">Playwright</span><span class="tag">QA automation</span>
+              <span class="tag">Laravel 13</span><span class="tag">PHP 8.4</span><span class="tag">React 19</span><span
+                class="tag">TypeScript</span><span class="tag">Expo</span><span class="tag">Electron</span><span
+                class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Cloud Run</span><span
+                class="tag">Playwright</span>
             </div>
           </article>
 
@@ -632,37 +618,39 @@
           <div class="stack__col">
             <h3>Backend</h3>
             <ul>
-              <li><b>NestJS</b> · Node.js</li>
+              <li><b>Laravel</b> · PHP 8.4 · Sanctum</li>
+              <li><b>Node</b> · Express · Prisma</li>
               <li>REST API design</li>
               <li>Multi-tenant architecture</li>
               <li>Role-based access control</li>
-              <li>Authentication &amp; authorisation</li>
+              <li>Queues &amp; background jobs</li>
             </ul>
           </div>
           <div class="stack__col">
             <h3>Frontend</h3>
             <ul>
-              <li><b>React</b> · TypeScript</li>
-              <li>Component systems</li>
+              <li><b>React 19</b> · TypeScript</li>
+              <li><b>Next.js</b> App Router</li>
+              <li>Vite · Tailwind · Radix UI</li>
               <li>Dashboard &amp; data-dense UI</li>
-              <li>HTML5 · CSS3 · responsive</li>
             </ul>
           </div>
           <div class="stack__col">
             <h3>Data</h3>
             <ul>
               <li><b>PostgreSQL</b></li>
+              <li>Prisma · Eloquent</li>
               <li>Schema &amp; migration design</li>
               <li>Double-entry accounting models</li>
-              <li>Python · pandas</li>
+              <li>Redis</li>
             </ul>
           </div>
           <div class="stack__col">
             <h3>Infrastructure</h3>
             <ul>
-              <li><b>Google Cloud Run</b></li>
-              <li>gcloud CLI · env management</li>
-              <li>Git · CI pipelines</li>
+              <li><b>Google Cloud Run</b> · Cloud SQL</li>
+              <li>Cloud Build · GitHub Actions</li>
+              <li>Docker · Caddy</li>
               <li>Cloudflare · DNS</li>
             </ul>
           </div>
@@ -675,10 +663,11 @@
             </ul>
           </div>
           <div class="stack__col">
-            <h3>Mobile</h3>
+            <h3>Apps beyond the browser</h3>
             <ul>
-              <li><b>Flutter</b> · Dart</li>
-              <li>Cross-platform delivery</li>
+              <li><b>Expo</b> · React Native</li>
+              <li><b>Electron</b> desktop</li>
+              <li>Socket.IO · WebSockets</li>
             </ul>
           </div>
         </div>
@@ -754,8 +743,9 @@
           <div class="about__body">
             <p>
               I started out self-taught, writing Python because something in front of me needed automating. That
-              hasn't really changed — it just got bigger. Today I run several products at once, which means I do the
-              database design, the API, the interface, the deployment and the support conversation that follows.
+              hasn't really changed — it just got bigger. Today I run two products at once, which means I do the database
+              design, the API, the web, mobile and desktop clients, the deployment, and the support conversation that
+              follows.
             </p>
             <p>
               Working across the whole stack on products I also operate has made me opinionated about restraint. Most
